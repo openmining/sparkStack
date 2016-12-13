@@ -13,7 +13,7 @@ object e200CreateOrReplaceTempView {
     val dfInput = spark.read.format("csv")
       .option("header","true")
       .option("inferSchema","true")
-      .load("/Home/OneDrive/data/TitanicTrain.csv")
+      .load("data/TitanicTrain.csv")
     System.out.print(dfInput)
     dfInput.show()
     dfInput.printSchema
